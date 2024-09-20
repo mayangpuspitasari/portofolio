@@ -1,6 +1,9 @@
 const Skill = () => {
   return (
-    <div className="skill flex flex-wrap">
+    <div
+      className="skill flex flex-wrap bg-[url('src/asset/night6.jpg')] bg-cover bg-center"
+      id="skill"
+    >
       <div className="w-full max-w-lg ">
         <h1 className="text-white font-bold relative">HTML</h1>
         <div className="w-full bg-gray-300 rounded-full h-6 mb-4">

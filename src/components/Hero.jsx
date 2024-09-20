@@ -1,13 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faLinkedin,
-  faGithub,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
 
 const Hero = () => {
-  const texts = ['Frontend Developer', 'Programmer', 'Web Developer'];
+  const texts = ['Junior Developer', 'Frontend Developer'];
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -48,60 +42,28 @@ const Hero = () => {
   }, [textIndex, isDeleting]);
 
   return (
-    <div className="bg-[url('src/asset/night3.jpg')] bg-cover bg-center h-screen flex items-center justify-between px-40">
+    <div
+      className="bg-[url('src/asset/night3.jpg')] bg-cover bg-center h-screen flex items-center justify-center px-40"
+      id="home"
+    >
       <div className="keterangan text-white">
-        <h1 className="text-4xl font-bold mb-4">Hai👋😊</h1>
-        <p className="text-2xl font-bold mb-2">
-          Saya{' '}
+        <h1 className="text-6xl font-bold mb-4">Hai! 👋😊</h1>
+        <p className="text-4xl font-bold mb-2">
+          Nama Saya{' '}
           <span className="text-4xl font-bold text-blue-300">
             Mayang Puspita Sari
           </span>
         </p>
-        <p className="text-xl">
-          Saya adalah seorang{' '}
-          <span className="font-bold text-blue-300 text-2xl">
+        <p className="text-xl font-bold">
+          Saya Seorang{' '}
+          <span className="font-bold text-blue-300 text-4xl">
             {displayText}
           </span>{' '}
           <br />
-          Saat ini saya adalah seorang mahasiswa Sistem Informasi Semester 7.
         </p>
-        <div className="flex gap-4 mt-4">
-          <a
-            href="https://linkedin.com/in/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-blue-500"
-          >
-            <FontAwesomeIcon icon={faLinkedin} size="2x" />
-          </a>
-          <a
-            href="https://github.com/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-black"
-          >
-            <FontAwesomeIcon icon={faGithub} size="2x" />
-          </a>
-          <a
-            href="https://twitter.com/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-blue-700"
-          >
-            <FontAwesomeIcon icon={faTwitter} size="2x" />
-          </a>
-        </div>
-        <button className=" mt-6 bg-blue-500 hover:bg-blue-700 active:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-violet-300 focus:ring-opacity-50 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <button className="mt-6 bg-transparent border-2 border-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-violet-300 focus:ring-opacity-50 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center gap-2">
           Download CV
         </button>
-      </div>
-
-      <div className="flex flex-col items-center space-y-4">
-        <img
-          src="src/asset/Mayang.jpg"
-          alt="Gambar Diri"
-          className="w-60 h-60 rounded-full object-cover shadow-lg shadow-blue-300"
-        />
       </div>
     </div>
   );
