@@ -1,35 +1,51 @@
+import React from 'react';
+
+const skills = [
+  { name: 'JavaScript', level: 'Intermediate', color: 'yellow' },
+  { name: 'React', level: 'Intermediate', color: 'blue-500' },
+  { name: 'Tailwind CSS', level: 'Advanced', color: 'teal-500' },
+  { name: 'Node.js', level: 'Beginer', color: 'green-500' },
+  { name: 'PHP', level: 'Intermediate', color: 'blue-300' },
+  { name: 'Bootstrap', level: 'Advanced', color: 'blue-700' },
+];
+
 const Skill = () => {
   return (
-    <div
-      className="skill flex flex-wrap bg-[url('src/asset/night6.jpg')] bg-cover bg-center"
-      id="skill"
-    >
-      <div className="w-full max-w-lg ">
-        <h1 className="text-white font-bold relative">HTML</h1>
-        <div className="w-full bg-gray-300 rounded-full h-6 mb-4">
-          <div
-            className="bg-blue-500 h-6 rounded-full"
-            style={{ width: '90%' }}
-          ></div>
-        </div>
-
-        <h3 className="text-white font-bold relative">CSS</h3>
-        <div className="w-full bg-gray-300 rounded-full h-6 mb-4">
-          <div
-            className="bg-green-500 h-6 rounded-full"
-            style={{ width: '85%' }}
-          ></div>
-        </div>
-
-        <h3 className="text-white font-bold relative">React</h3>
-        <div className="w-full bg-gray-300 rounded-full h-6 mb-4">
-          <div
-            className="bg-blue-700 h-6 rounded-full"
-            style={{ width: '75%' }}
-          ></div>
+    <section className="bg-gray-900 py-20" id="skill">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-white text-center mb-8">
+          My Skills
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skills.map((skill) => (
+            <div
+              key={skill.name}
+              className={`bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-${skill.color} hover:scale-105 transition transform duration-300 ease-in-out`}
+            >
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {skill.name}
+              </h3>
+              <p className="text-gray-400">{skill.level}</p>
+              <div className="mt-4">
+                <div
+                  className={`w-full h-2 bg-${skill.color} rounded-full`}
+                  style={{
+                    width:
+                      skill.level === 'Expert'
+                        ? '100%'
+                        : skill.level === 'Advanced'
+                        ? '75%'
+                        : skill.level === 'Intermediate'
+                        ? '50%'
+                        : '25%',
+                  }}
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
