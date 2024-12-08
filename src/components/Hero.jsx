@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const Hero = () => {
-  const texts = ['Junior Developer', 'Frontend Developer'];
+  const texts = ['Junior Developer', 'Web Developer'];
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -43,27 +43,37 @@ const Hero = () => {
 
   return (
     <div
-      className="bg-gray-900 bg-cover bg-center h-screen flex items-center justify-center px-40"
+      className="bg-gray-900 bg-cover bg-center h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-40 text-center md:text-left"
       id="home"
     >
-      <div className="keterangan text-white">
-        <h1 className="text-6xl font-bold mb-4">Hai! 👋😊</h1>
-        <p className="text-4xl font-bold mb-2">
+      <div className="text-white">
+        {/* Heading utama */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          Hai! 👋😊
+        </h1>
+
+        {/* Nama dan jabatan */}
+        <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
           Nama Saya{' '}
-          <span className="text-4xl font-bold text-blue-300">
+          <span className="text-lg sm:text-3xl md:text-4xl font-bold text-blue-300">
             Mayang Puspita Sari
           </span>
         </p>
-        <p className="text-xl font-bold">
+        <p className="text-sm sm:text-lg md:text-xl font-bold">
           Saya Seorang{' '}
-          <span className="font-bold text-blue-300 text-4xl">
+          <span className="font-bold text-blue-300 text-lg sm:text-2xl md:text-4xl">
             {displayText}
-          </span>{' '}
-          <br />
+          </span>
         </p>
-        <button className="mt-6 bg-transparent border-2 border-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-violet-300 focus:ring-opacity-50 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex items-center gap-2">
+
+        {/* Tombol Download CV */}
+        <a
+          href="/cv/cv-mayang.pdf" // Path file PDF ada di public/cv/
+          download="CV Mayang Puspita Sari.pdf" // Nama file saat diunduh
+          className="mt-6 bg-transparent border-2 border-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 inline-block text-center"
+        >
           Download CV
-        </button>
+        </a>
       </div>
     </div>
   );

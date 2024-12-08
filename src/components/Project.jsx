@@ -2,6 +2,7 @@ import React from 'react';
 import portfolioImg from '../asset/prt.jpg';
 import ecommerceImg from '../asset/kopi.jpg';
 import blogImg from '../asset/thread2.jpg';
+import palestina from '../asset/palestina.jpg';
 
 const projects = [
   {
@@ -25,6 +26,14 @@ const projects = [
     image: blogImg,
     link: 'https://app-forum-diskusi.vercel.app/',
     technologies: ['React', 'Tailwind CSS'],
+  },
+  {
+    title: 'Website Penggalangan Dana',
+    description:
+      'Aplikasi Penggalangan Dana Khusus Palestina, menggunakan Tailwind CSS, React , Node.js, Express.js, MongoDB.',
+    image: palestina,
+    link: 'https://bersama-palestina.vercel.app/',
+    technologies: ['React', 'Tailwind CSS', 'Node.JS', 'Express.JS', 'MongoDB'],
   },
 ];
 
