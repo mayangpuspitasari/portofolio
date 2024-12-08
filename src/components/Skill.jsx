@@ -1,12 +1,12 @@
 import React from 'react';
 
 const skills = [
-  { name: 'JavaScript', level: 'Intermediate', color: 'yellow' },
-  { name: 'React', level: 'Intermediate', color: 'blue-500' },
+  { name: 'JavaScript', level: 'Intermediate', color: 'teal-500' },
+  { name: 'React', level: 'Intermediate', color: 'teal-500' },
   { name: 'Tailwind CSS', level: 'Advanced', color: 'teal-500' },
-  { name: 'Node.js', level: 'Beginer', color: 'green-500' },
-  { name: 'PHP', level: 'Intermediate', color: 'blue-300' },
-  { name: 'Bootstrap', level: 'Advanced', color: 'blue-700' },
+  { name: 'Node.js', level: 'Beginer', color: 'teal-500' },
+  { name: 'PHP', level: 'Intermediate', color: 'teal-500' },
+  { name: 'Bootstrap', level: 'Advanced', color: 'teal-500' },
 ];
 
 const Skill = () => {

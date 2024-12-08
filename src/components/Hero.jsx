@@ -43,7 +43,7 @@ const Hero = () => {
 
   return (
     <div
-      className="bg-[url('src/asset/night3.jpg')] bg-cover bg-center h-screen flex items-center justify-center px-40"
+      className="bg-gray-900 bg-cover bg-center h-screen flex items-center justify-center px-40"
       id="home"
     >
       <div className="keterangan text-white">

@@ -1,26 +1,30 @@
 import React from 'react';
+import portfolioImg from '../asset/prt.jpg';
+import ecommerceImg from '../asset/kopi.jpg';
+import blogImg from '../asset/thread2.jpg';
 
 const projects = [
   {
     title: 'Portfolio Website',
     description: 'Website pribadi menggunakan React dan Tailwind CSS.',
-    image: 'https://via.placeholder.com/300',
-    link: '#',
+    image: portfolioImg,
+    link: 'https://portofolio-six-brown.vercel.app/',
     technologies: ['React', 'Tailwind CSS'],
   },
   {
     title: 'E-commerce App',
     description: 'Aplikasi e-commerce dengan fitur cart dan checkout.',
-    image: 'https://via.placeholder.com/300',
-    link: '#',
-    technologies: ['Node.js', 'Express', 'MongoDB'],
+    image: ecommerceImg,
+    link: 'https://mayangpuspitasari.github.io/coffe-shop/',
+    technologies: ['CSS', 'Javascript'],
   },
   {
     title: 'Blog Platform',
-    description: 'Platform blog dengan fitur CRUD menggunakan Laravel.',
-    image: 'https://via.placeholder.com/300',
-    link: '#',
-    technologies: ['Laravel', 'Bootstrap'],
+    description:
+      'Platform blog dengan fitur CRUD menggunakan Tailwinnd CSS dan juga React.',
+    image: blogImg,
+    link: 'https://app-forum-diskusi.vercel.app/',
+    technologies: ['React', 'Tailwind CSS'],
   },
 ];
 
