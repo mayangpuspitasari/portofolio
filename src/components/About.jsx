@@ -6,6 +6,13 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import myFoto from '../asset/Mayang.jpg';
 
+const foto = [
+  {
+    image: myFoto,
+    title: 'Foto Diri',
+  },
+];
+
 const About = () => {
   return (
     <div
@@ -15,8 +22,8 @@ const About = () => {
       <div className="flex justify-center">
         <div className="relative p-4 overflow-hidden transform hover:scale-105 hover:rotate-3 transition-transform duration-700">
           <img
-            src={myFoto}
-            alt="Gambar Diri"
+            src={foto[0].image} // Memanggil elemen pertama dari array foto
+            alt={foto[0].title} // Memanggil elemen pertama dari array foto
             className="w-60 h-60 rounded-full object-cover hover:shadow-2xl transition-shadow duration-300"
             style={{ boxShadow: '0 4px 6px 0 rgba(147, 197, 253, 0.5)' }} // ini blue-300
           />
