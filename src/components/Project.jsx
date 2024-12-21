@@ -16,8 +16,8 @@ const projects = [
     title: 'E-commerce App',
     description: 'Aplikasi e-commerce dengan fitur cart dan checkout.',
     image: ecommerceImg,
-    link: 'https://mayangpuspitasari.github.io/coffe-shop/',
-    technologies: ['CSS', 'Javascript'],
+    link: 'https://e-commerce-weld-three-12.vercel.app/',
+    technologies: ['React', 'Tailwind CSS'],
   },
   {
     title: 'Blog Platform',
