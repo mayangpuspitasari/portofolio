@@ -54,7 +54,7 @@ const About = () => {
         {/* Icon Sosial Media */}
         <div className="flex justify-center md:justify-start gap-6">
           <a
-            href="https://linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/mayangpuspitasari02"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-blue-500 transition-transform duration-500 hover:scale-110"
@@ -62,20 +62,12 @@ const About = () => {
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
           <a
-            href="https://github.com/your-profile"
+            href="https://github.com/mayangpuspitasari"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-300 transition-transform duration-500 hover:scale-110"
           >
             <FontAwesomeIcon icon={faGithub} size="2x" />
-          </a>
-          <a
-            href="https://instagram.com/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-pink-500 transition-transform duration-500 hover:scale-110"
-          >
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
         </div>
       </div>
