@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FaReact,
   FaJs,
@@ -6,8 +6,6 @@ import {
   FaNodeJs,
   FaBootstrap,
   FaLaravel,
-  FaDatabase,
-  FaPaintBrush,
 } from 'react-icons/fa';
 import {
   SiTailwindcss,
@@ -34,23 +32,44 @@ const skills = [
 ];
 
 const Skill = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const initialSkillsToShow = 4;
+
   return (
     <section className="bg-gray-900 py-20" id="skill">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-white text-center mb-8">
           My Skills
         </h2>
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center">
-          {skills.map((skill) => (
-            <div key={skill.name} className="flex flex-col items-center p-4">
+        <div
+          className={`grid ${
+            showAll
+              ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8'
+              : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 justify-center'
+          } items-center`}
+        >
+          {(showAll ? skills : skills.slice(0, initialSkillsToShow)).map((skill) => (
+            <div
+              key={skill.name}
+              className="flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300"
+            >
               <div
-                className={`text-white text-5xl w-20 h-20 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition transform duration-300 ease-in-out ${skill.color}`}
+                className={`text-white text-5xl w-20 h-20 rounded-full flex items-center justify-center mb-4 ${skill.color}`}
               >
                 {skill.icon}
               </div>
-              <p className="text-white font-semibold mt-2">{skill.name}</p>
+              <p className="text-white font-medium">{skill.name}</p>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-8">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="bg-blue-500 text-white py-2 px-6 rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300"
+          >
+            {showAll ? 'Lihat Lebih Sedikit' : 'Lihat Lebih Banyak'}
+          </button>
         </div>
       </div>
     </section>
@@ -58,4 +77,3 @@ const Skill = () => {
 };
 
 export default Skill;
-
