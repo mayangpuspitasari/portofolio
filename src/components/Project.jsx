@@ -25,7 +25,7 @@ const projects = [
       'Platform blog dengan fitur CRUD menggunakan Tailwinnd CSS dan juga React.Menggunakan bantuan API publik untuk memunculkan datanya',
     image: blogImg,
     link: 'https://app-forum-diskusi.vercel.app/',
-    technologies: ['React', 'Tailwind CSS'],
+    technologies: ['React', 'Tailwind CSS','API Publik'],
   },
   {
     title: 'Website Penggalangan Dana',
