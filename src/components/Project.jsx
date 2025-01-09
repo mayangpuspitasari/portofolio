@@ -7,7 +7,7 @@ import palestina from '../asset/palestina.jpg';
 const projects = [
   {
     title: 'Portfolio Website',
-    description: 'Website pribadi menggunakan React dan Tailwind CSS.',
+    description: 'Website portofolio pribadi yang di buat sebagai perkenalan dan juga informasi mengenai saya',
     image: portfolioImg,
     link: 'https://portofolio-six-brown.vercel.app/',
     technologies: ['React', 'Tailwind CSS'],
@@ -22,7 +22,7 @@ const projects = [
   {
     title: 'Blog Platform',
     description:
-      'Platform blog dengan fitur CRUD menggunakan Tailwinnd CSS dan juga React.',
+      'Platform blog dengan fitur CRUD menggunakan Tailwinnd CSS dan juga React.Menggunakan bantuan API publik untuk memunculkan datanya',
     image: blogImg,
     link: 'https://app-forum-diskusi.vercel.app/',
     technologies: ['React', 'Tailwind CSS'],
