@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: 'E-commerce App',
-    description: 'Aplikasi Tokoh Online CRM.',
+    description: 'Aplikasi Tokoh Fudgy Brownies,Bisa melakukan transaksi dengan metode pembayaran manual yang mengupload bukti pembayaran. Terdiri dari Role Admin dan juga User biasa',
     image: ecommerceImg,
     link: 'https://e-commerce-weld-three-12.vercel.app/',
     technologies: ['React', 'Tailwind CSS','Express.JS','MYSQL'],
