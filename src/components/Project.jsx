@@ -1,6 +1,6 @@
 import React from 'react';
 import portfolioImg from '../asset/prt.jpg';
-import ecommerceImg from '../asset/kopi.jpg';
+import ecommerceImg from '../asset/online.jpeg';
 import blogImg from '../asset/thread2.jpg';
 import palestina from '../asset/palestina.jpg';
 
@@ -14,10 +14,10 @@ const projects = [
   },
   {
     title: 'E-commerce App',
-    description: 'Aplikasi e-commerce dengan fitur cart dan checkout.',
+    description: 'Aplikasi Tokoh Online CRM.',
     image: ecommerceImg,
     link: 'https://e-commerce-weld-three-12.vercel.app/',
-    technologies: ['React', 'Tailwind CSS'],
+    technologies: ['React', 'Tailwind CSS','Express.JS','MYSQL'],
   },
   {
     title: 'Blog Platform',
