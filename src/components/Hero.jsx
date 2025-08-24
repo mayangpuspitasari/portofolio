@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const Hero = () => {
-  const texts = ['Junior Developer', 'Web Developer'];
+  const texts = ['Junior Developer', 'React Developer', 'System Analyst'];
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -68,7 +68,7 @@ const Hero = () => {
 
         {/* Tombol Download CV */}
         <a
-          href="/cv/cv-mayang.pdf" // Path file PDF ada di public/cv/
+          href="/cv/resume-mayang.pdf" // Path file PDF ada di public/cv/
           download="CV Mayang Puspita Sari.pdf" // Nama file saat diunduh
           className="mt-6 bg-transparent border-2 border-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 inline-block text-center"
         >

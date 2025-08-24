@@ -14,6 +14,7 @@ import {
   SiPostman,
   SiCanva,
   SiMysql,
+  SiFigma,
 } from 'react-icons/si';
 
 const skills = [
@@ -29,46 +30,56 @@ const skills = [
   { name: 'Canva', icon: <SiCanva />, color: 'bg-blue-500' },
   { name: 'Postman', icon: <SiPostman />, color: 'bg-orange-500' },
   { name: 'MySQL', icon: <SiMysql />, color: 'bg-blue-600' },
+  { name: 'Figma', icon: <SiFigma />, color: 'bg-pink-500' },
 ];
 
 const Skill = () => {
   const [showAll, setShowAll] = useState(false);
 
-  const initialSkillsToShow = 4;
+  const initialSkillsToShow = 6; // tampilkan 6 dulu biar balance
 
   return (
     <section className="bg-gray-900 py-20" id="skill">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-white text-center mb-8">
-          My Skills
+      <div className="container mx-auto px-6 md:px-12 lg:px-20">
+        {/* Judul */}
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          My <span className="text-blue-400">Skills</span>
         </h2>
+
+        {/* Grid Skill */}
         <div
           className={`grid ${
             showAll
               ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8'
-              : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 justify-center'
-          } items-center`}
+              : 'grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-8 justify-center'
+          }`}
         >
-          {(showAll ? skills : skills.slice(0, initialSkillsToShow)).map((skill) => (
-            <div
-              key={skill.name}
-              className="flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300"
-            >
+          {(showAll ? skills : skills.slice(0, initialSkillsToShow)).map(
+            (skill) => (
               <div
-                className={`text-white text-5xl w-20 h-20 rounded-full flex items-center justify-center mb-4 ${skill.color}`}
+                key={skill.name}
+                className="flex flex-col items-center p-5 bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
               >
-                {skill.icon}
+                <div
+                  className={`text-white text-4xl w-20 h-20 rounded-full flex items-center justify-center mb-3 ${skill.color}`}
+                >
+                  {skill.icon}
+                </div>
+                <p className="text-white font-medium text-center">
+                  {skill.name}
+                </p>
               </div>
-              <p className="text-white font-medium">{skill.name}</p>
-            </div>
-          ))}
+            ),
+          )}
         </div>
-        <div className="text-center mt-8">
+
+        {/* Tombol */}
+        <div className="text-center mt-12">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="bg-blue-500 text-white py-2 px-6 rounded-md shadow-md hover:bg-blue-600 transition-colors duration-300"
+            className="bg-blue-500 text-white py-2 px-8 rounded-full shadow-md hover:bg-blue-600 transition-colors duration-300"
           >
-            {showAll ? 'Lihat Lebih Sedikit' : 'Lihat Lebih Banyak'}
+            {showAll ? 'Lihat Lebih Sedikit' : 'Lihat Semua Skill'}
           </button>
         </div>
       </div>
@@ -77,3 +88,4 @@ const Skill = () => {
 };
 
 export default Skill;
+
