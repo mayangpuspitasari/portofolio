@@ -53,7 +53,7 @@ const About = () => {
             React.js, Node.js, Express.js, dan MySQL
           </span>
           , sehingga dapat mendukung proses analisis sekaligus berkolaborasi
-          dengan tim developer. Dengan bekal ini, saya mampu tidak hanya
+          dengan tim developer. Dengan bekal ini, saya tidak hanya mampu
           menganalisis, tetapi juga mengembangkan aplikasi atau sistem sesuai
           kebutuhan.
         </p>
